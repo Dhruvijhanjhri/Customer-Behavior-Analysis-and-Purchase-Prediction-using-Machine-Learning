@@ -145,7 +145,7 @@ Confusion Matrix
 
 Performance comparison helps identify the best model.
 
-=> Technologies Used
+# Technologies Used
 
 - Programming Language
 
@@ -163,7 +163,7 @@ Performance comparison helps identify the best model.
 
 - Scikit-learn
 
-=> Tools
+# Tools
 
 - Jupyter Notebook
 
@@ -171,7 +171,7 @@ Performance comparison helps identify the best model.
 
 - GitHub
 
-=> Project Structure
+# Project Structure
 
 Customer-Behavior-Analysis/
 │
@@ -227,7 +227,7 @@ Navigate to the project folder
 
 cd Customer-Behavior-Analysis-and-Purchase-Prediction-using-Machine-Learning
 
-Install dependencies
+# Install dependencies
 
 pip install -r requirements.txt
 
