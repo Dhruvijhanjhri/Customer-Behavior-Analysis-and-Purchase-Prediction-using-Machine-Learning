@@ -1,199 +1,192 @@
 # Customer Behavior Analysis and Purchase Prediction using Machine Learning
 
-# Project Overview
+## Project Overview
 
-This project analyzes customer behavior in an e-commerce platform and predicts whether a user is likely to make a purchase based on their browsing and interaction data.
+This project focuses on analyzing customer behavior on an e-commerce platform and building machine learning models to predict whether a user will make a purchase.
 
-Understanding customer behavior helps businesses:
-- Improve product recommendations
-- Optimize marketing strategies
-- Increase conversion rates
-- Enhance customer experience
+The dataset contains customer interaction events such as product views, cart additions, and purchases. By performing exploratory data analysis, feature engineering, and machine learning modeling, the project identifies patterns in customer activity and predicts purchasing behavior.
 
-This project applies machine learning models to analyze user activity and predict purchase behavior using an E-commerce event dataset.
+This project demonstrates the complete machine learning workflow including data preprocessing, exploratory analysis, dimensionality reduction, supervised learning, and clustering for customer segmentation.
 
-# Dataset
+---
 
-The dataset used in this project contains user interaction events from an e-commerce platform.
+## Problem Statement
 
-Each row represents a customer interaction event.
+E-commerce platforms generate large amounts of user interaction data. Understanding this behavior is essential for improving product recommendations, marketing strategies, and sales performance.
 
-# Dataset Columns
-Column	                        Description
-event_time	                   Timestamp of the event
-event_type	                   Type of event (view, cart, purchase)
-product_id	                   Unique product identifier
-category_id	                   Product category ID
-category_code	                 Category hierarchy
-brand	                         Product brand
-price	                         Product price
-user_id	                       Unique user identifier
-user_session	                 Session ID
+The objective of this project is to:
 
-The dataset contains millions of interaction records, representing real-world customer behavior patterns.
+* Analyze customer interaction patterns
+* Understand user shopping behavior
+* Build machine learning models to predict whether a customer will make a purchase
+* Segment customers using clustering techniques
 
-# Project Objectives
-The main objectives of this project are:
-1) Analyze customer interaction patterns in e-commerce data
-2) Perform exploratory data analysis (EDA)
-3) Engineer meaningful features from behavioral data
-4) Apply dimensionality reduction techniques
-5) Train multiple machine learning models
-6) Compare model performance
-7) Predict purchase likelihood
+---
 
-# Project Workflow
-The project follows a structured machine learning pipeline.
+## Dataset Description
 
-# 1) Data Collection
+The dataset represents user interaction with products on an e-commerce platform.
 
-Load and inspect the e-commerce dataset.
+Each row corresponds to a user activity event.
 
-# 2) Data Cleaning
+| Column        | Description                           |
+| ------------- | ------------------------------------- |
+| event_time    | Timestamp of user interaction         |
+| event_type    | Type of action (view, cart, purchase) |
+| product_id    | Unique product identifier             |
+| category_id   | Product category identifier           |
+| category_code | Category name                         |
+| brand         | Product brand                         |
+| price         | Product price                         |
+| user_id       | Unique user identifier                |
+| user_session  | User browsing session ID              |
 
-- Handle missing values
-- Remove irrelevant features
-- Format timestamps
-- Convert categorical variables
+---
 
-# 3) Exploratory Data Analysis (EDA)
-Analyze patterns such as:
-- Most viewed products
-- Purchase behavior
-- Price distribution
-- Event type frequency
-- User activity
+## Tools and Technologies Used
 
-Visualization libraries used:
-- Matplotlib
-- Seaborn
+* Python
+* Jupyter Notebook
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Joblib
+* Git & GitHub
 
-# 4) Feature Engineering
+---
 
-New features are created such as:
-- User activity count
-- Average price viewed
-- Session interaction count
-- Event type encoding
+## Project Workflow
 
-These features help the model better understand customer behavior.
+### 1. Data Understanding
 
-# 5) Dimensionality Reduction
+* Loaded and explored the dataset
+* Analyzed dataset size, structure, and data types
+* Identified missing values and unique entities
 
-High-dimensional data is reduced using techniques like:
-- PCA (Principal Component Analysis)
+### 2. Data Preprocessing
 
-This improves model efficiency and reduces noise.
+* Converted timestamp columns to datetime
+* Handled missing values
+* Removed duplicates
+* Cleaned categorical variables
+* Prepared dataset for analysis
 
-# 6) Machine Learning Models
+### 3. Exploratory Data Analysis (EDA)
 
-Multiple classification algorithms are used:
-- Logistic Regression
-- Random Forest
-- Decision Tree
-- Support Vector Machine (SVM)
-- K-Nearest Neighbors
+* Analyzed distribution of user actions
+* Studied price distribution
+* Identified popular products and categories
+* Examined user activity patterns
+* Visualized insights using various charts
 
-These models predict whether a user interaction will lead to a purchase.
+### 4. Dimensionality Reduction
 
-# 7) Model Evaluation
+* Applied Principal Component Analysis (PCA)
+* Reduced feature dimensionality
+* Visualized patterns in customer behavior
 
-Models are evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
+### 5. Supervised Learning (Purchase Prediction)
 
-Performance comparison helps identify the best model.
+Implemented multiple machine learning models to predict purchase behavior.
 
-# Technologies Used
+Models used:
 
-- Programming Language
+* Logistic Regression
+* Support Vector Machine (SVM)
+* Random Forest Classifier
 
-- Python
+Evaluation metrics:
 
-- Libraries
+* Accuracy
+* Confusion Matrix
+* Model comparison
 
-- Pandas
+### 6. Clustering (Customer Segmentation)
 
-- NumPy
+* Applied K-Means clustering
+* Grouped customers based on behavior patterns
+* Identified different customer segments
 
-- Matplotlib
+---
 
-- Seaborn
+## Results
 
-- Scikit-learn
+The machine learning models were evaluated based on their prediction accuracy.
 
-# Tools
+Ensemble models such as Random Forest performed well in predicting customer purchases.
 
-- Jupyter Notebook
+The clustering analysis also helped identify different user groups such as:
 
-- Git
+* Frequent viewers
+* Active buyers
+* Casual browsers
 
-- GitHub
+---
 
-# Project Structure
+## Project Structure
 
-Customer-Behavior-Analysis/
-│
-├── data/
-│   └── ecommerce_dataset.csv
-│
-├── notebooks/
-│   └── customer_behavior_analysis.ipynb
-│
-├── models/
-│   └── trained_models.pkl
-│
-├── results/
-│   └── model_performance.png
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
+```
+Customer-Behavior-Analysis-and-Purchase-Prediction
 
-# Results
+data
+    ecommerce_data.csv
 
-The models were trained and compared based on multiple evaluation metrics.
+notebooks
+    data_understanding.ipynb
+    data_preprocessing.ipynb
+    eda.ipynb
+    dimensionality_reduction.ipynb
+    supervised_learning.ipynb
+    clustering.ipynb
 
-Key insights:
+images
+    event_type_distribution.png
+    price_distribution.png
+    confusion_matrix.png
 
-- User behavior patterns strongly influence purchase probability
+models
+    purchase_prediction_model.pkl
 
-- Certain product categories show higher conversion rates
+results
+    model_results.csv
 
-- Machine learning models can effectively predict purchasing behavior
+requirements.txt
+README.md
+```
 
-# Future Improvements
+---
 
-Possible improvements for this project include:
-- Using deep learning models
-- Building a recommendation system
-- Real-time purchase prediction
-- Deploying the model using a web application
-- Using larger datasets
+## How to Run the Project
 
-# How to Run the Project
+1. Clone the repository
 
-- Clone the repository
-
+```
 git clone https://github.com/Dhruvijhanjhri/Customer-Behavior-Analysis-and-Purchase-Prediction-using-Machine-Learning.git
+```
 
-- Navigate to the project folder
+2. Install dependencies
 
-cd Customer-Behavior-Analysis-and-Purchase-Prediction-using-Machine-Learning
-
-- Install dependencies
-
+```
 pip install -r requirements.txt
+```
 
-- Run the notebook
+3. Open Jupyter Notebook
 
+```
 jupyter notebook
+```
 
-# Author
-Dhruv Jhanjhri
+4. Run notebooks in sequence from data understanding to clustering.
 
-# License
-This project is for educational and research purposes.
+---
+
+## Future Improvements
+
+* Deploy the model using Streamlit or Flask
+* Integrate real-time customer data
+* Apply deep learning models for prediction
+* Build a recommendation system for products
+
+
